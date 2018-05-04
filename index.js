@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 const linq = require('linq');
 
 AWS.config.update({
-    credentials: { accessKeyId: "AKIAJEQ4FP677MZSNG5A", secretAccessKey: "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" },
+    credentials: { accessKeyId: "", secretAccessKey: "" },
     region: "us-west-2"
 });
 
@@ -92,7 +92,7 @@ function sendNotification(message) {
 
     sns.publish({
         Message: message,
-        TopicArn: 'arn:aws:sns:us-west-2:612192812274:SWDPlates'
+        TopicArn: ''
     }, function (err, data) {
         if (err) {
             console.log(err.stack);
